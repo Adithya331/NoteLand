@@ -6,7 +6,7 @@ var noteTitle = document.querySelector('.note_title');
 var noteContent = document.querySelector('.note_content');
 var addNote = document.querySelector('.addNote');
 var tick = document.createElement('img')
-tick.src = './assets/tick.svg'
+tick.src = './tick.svg'
 
 createNote.addEventListener('click', function () {
     document.querySelector('.nofile').style.zIndex = '-1'
