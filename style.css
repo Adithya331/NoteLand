@@ -278,6 +278,11 @@
   left: 25%;
 }
 
+.tick{
+  width: 28px;
+  height: 28px;
+}
+
 .right .nofile img{
   border-radius: 5rem;
   height: 30rem;

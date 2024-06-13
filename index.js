@@ -151,7 +151,8 @@ function renderTasks(note) {
         label.className = 'label';
 
         var tick = document.createElement('img')
-        tick.src = './tick.svg'
+        tick.className = 'tick'
+        tick.src = '/assets/tick.png'
 
         if(task.taskStatus === true)
             {
@@ -173,7 +174,8 @@ function renderTasks(note) {
             label.textContent = task.taskName ;
             radio.remove();
             var tick = document.createElement('img')
-            tick.src = './tick.svg'
+            tick.className = 'tick'
+            tick.src = '/assets/tick.png'
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
         });
@@ -231,7 +233,8 @@ function addTask(note) {
         label.textContent = task.taskName ;
         radio.remove();
         var tick = document.createElement('img')
-        tick.src = './tick.svg'
+        tick.className = 'tick'
+        tick.src = '/assets/tick.png'
         taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
     });
