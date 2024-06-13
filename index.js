@@ -149,7 +149,7 @@ function renderTasks(note) {
         
         // taskContainer.append(label);
         var tick = document.createElement('img')
-                tick.src = './tick.svg'
+        tick.src = '../assets/tick.svg'
 
         if(task.taskStatus === true)
             {
@@ -172,7 +172,7 @@ function renderTasks(note) {
             radio.remove();
             // label.remove();
             var tick = document.createElement('img')
-            tick.src = './tick.svg'
+            tick.src = '../assets/tick.svg'
             // taskContainer.appendChild(label)
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
@@ -232,8 +232,8 @@ function addTask(note) {
         radio.remove();
         // label.remove();
         var tick = document.createElement('img')
-            tick.src = './tick.svg'
-            // taskContainer.appendChild(label)
+        tick.src = '../assets/tick.svg'
+        // taskContainer.appendChild(label)
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
     });
