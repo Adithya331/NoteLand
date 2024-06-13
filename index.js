@@ -5,8 +5,6 @@ var addingNoteDiv = document.querySelector('.addingnote');
 var noteTitle = document.querySelector('.note_title');
 var noteContent = document.querySelector('.note_content');
 var addNote = document.querySelector('.addNote');
-var tick = document.createElement('img')
-tick.src = './tick.svg'
 
 createNote.addEventListener('click', function () {
     if (right.querySelector('.opened_note')) {
@@ -152,6 +150,9 @@ function renderTasks(note) {
         label.textContent = task.taskName 
         label.className = 'label';
 
+        var tick = document.createElement('img')
+        tick.src = './tick.svg'
+
         if(task.taskStatus === true)
             {
                 taskContainer.append(label)
@@ -171,6 +172,8 @@ function renderTasks(note) {
             task.taskStatus = true;
             label.textContent = task.taskName ;
             radio.remove();
+            var tick = document.createElement('img')
+            tick.src = './tick.svg'
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
         });
@@ -227,6 +230,8 @@ function addTask(note) {
         task.taskStatus = true;
         label.textContent = task.taskName ;
         radio.remove();
+        var tick = document.createElement('img')
+        tick.src = './tick.svg'
         taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
     });
