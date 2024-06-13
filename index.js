@@ -163,17 +163,19 @@ function renderTasks(note) {
                 taskContainer.append(label)
             }
 
-            
-        
+
         tasksContainer.append(taskContainer);
 
         radio.addEventListener('click', () => {
             task.taskStatus = true;
-            // label.textContent = task.taskName 
+            label.textContent = task.taskName ;
             radio.remove();
-            taskContainer.append(tick)
-            tasksContainer.appendChild(taskContainer)
-            updateNoteInLocalStorage(note);
+            label.remove();
+            var tick = document.createElement('img')
+            tick.src = '../assets/tick.svg'
+            taskContainer.appendChild(label)
+            taskContainer.appendChild(tick)
+        updateNoteInLocalStorage(note);
         });
     });
 
@@ -181,20 +183,18 @@ function renderTasks(note) {
 }
 
 function addTask(note) {
-    var taskName = document.querySelector('.add_task_title').value
+    var taskName = document.querySelector('.add_task_title').value 
 
-    if (taskName === ''){
-        alert('Task cannot be empty')
+    if(taskName === ''){
+        console.log("Task name cannot be empty")
         return
-    } 
-
+    }
     var task = {
         taskName: taskName,
         taskStatus: false
     }
-
+    
     note.noteTask.push(task)
-    console.log(note)
     updateNoteInLocalStorage(note);
 
     var tasksContainer = document.querySelector('.tasks');
@@ -228,10 +228,12 @@ function addTask(note) {
 
     radio.addEventListener('click', () => {
         task.taskStatus = true;
-        // label.textContent = task.taskName ;
+        label.textContent = task.taskName ;
         radio.remove();
+        label.remove();
         var tick = document.createElement('img')
             tick.src = '../assets/tick.svg'
+            taskContainer.appendChild(label)
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
     });

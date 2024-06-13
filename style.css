@@ -16,7 +16,7 @@
   flex-grow: .8;
   align-items: center;
   gap: 1rem;
-  background-color: #26A69A;
+  background-color: #B3E5FC;
 }
 
 .container .right{
@@ -26,7 +26,7 @@
 }
 
 .container .logo{
-  width: 90%;
+  width: 95%;
   display: flex;
   background-color: #263238;
   color: white;
