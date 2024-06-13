@@ -9,8 +9,12 @@ var tick = document.createElement('img')
 tick.src = './tick.svg'
 
 createNote.addEventListener('click', function () {
+    if (right.querySelector('.opened_note')) {
+        right.querySelector('.opened_note').remove();
+    }
     document.querySelector('.nofile').style.zIndex = '-1'
     addingNoteDiv.style.display = 'block';
+
     if (addingNoteDiv.style.display == 'none') {
         createNote.disabled = true;
     }
