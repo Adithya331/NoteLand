@@ -170,10 +170,10 @@ function renderTasks(note) {
             task.taskStatus = true;
             label.textContent = task.taskName ;
             radio.remove();
-            label.remove();
+            // label.remove();
             var tick = document.createElement('img')
             tick.src = './tick.svg'
-            taskContainer.appendChild(label)
+            // taskContainer.appendChild(label)
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
         });
@@ -230,10 +230,10 @@ function addTask(note) {
         task.taskStatus = true;
         label.textContent = task.taskName ;
         radio.remove();
-        label.remove();
+        // label.remove();
         var tick = document.createElement('img')
             tick.src = './tick.svg'
-            taskContainer.appendChild(label)
+            // taskContainer.appendChild(label)
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
     });
