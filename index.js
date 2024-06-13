@@ -5,6 +5,8 @@ var addingNoteDiv = document.querySelector('.addingnote');
 var noteTitle = document.querySelector('.note_title');
 var noteContent = document.querySelector('.note_content');
 var addNote = document.querySelector('.addNote');
+var tick = document.createElement('img')
+tick.src = './assets/tick.svg'
 
 createNote.addEventListener('click', function () {
     document.querySelector('.nofile').style.zIndex = '-1'
@@ -146,11 +148,6 @@ function renderTasks(note) {
         label.textContent = task.taskName 
         label.className = 'label';
 
-        
-        // taskContainer.append(label);
-        var tick = document.createElement('img')
-        tick.src = 'assets/tick.svg'
-
         if(task.taskStatus === true)
             {
                 taskContainer.append(label)
@@ -170,10 +167,6 @@ function renderTasks(note) {
             task.taskStatus = true;
             label.textContent = task.taskName ;
             radio.remove();
-            // label.remove();
-            var tick = document.createElement('img')
-            tick.src = 'assets/tick.svg'
-            // taskContainer.appendChild(label)
             taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
         });
@@ -230,11 +223,7 @@ function addTask(note) {
         task.taskStatus = true;
         label.textContent = task.taskName ;
         radio.remove();
-        // label.remove();
-        var tick = document.createElement('img')
-        tick.src = 'assets/tick.svg'
-        // taskContainer.appendChild(label)
-            taskContainer.appendChild(tick)
+        taskContainer.appendChild(tick)
         updateNoteInLocalStorage(note);
     });
 }
